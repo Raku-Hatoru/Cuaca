@@ -29,17 +29,17 @@ lib/
 ├── main.dart
 ├── app.dart
 ├── core/
-│   ├── constants/   (api_constants.dart, app_colors.dart)
-│   ├── theme/       (app_theme.dart)
-│   └── utils/       (app_snackbar.dart, date_formatter.dart, temperature_utils.dart, weather_code_mapper.dart)
+│   ├── constants/    (api_constants.dart, app_colors.dart)
+│   ├── theme/        (app_theme.dart)
+│   └── utils/        (app_snackbar.dart, date_formatter.dart, temperature_utils.dart, weather_code_mapper.dart)
 ├── data/
-│   ├── models/      (air_quality_data.dart, current_weather.dart, daily_forecast.dart, hourly_forecast.dart, location_model.dart, weather_data.dart)
-│   ├── services/    (app_exception.dart, geocoding_api_service.dart, local_storage_service.dart, weather_api_service.dart)
-│   └── repositories/(location_repository.dart, weather_repository.dart)
-├── viewmodels/      (favorites_viewmodel.dart, search_viewmodel.dart, weather_viewmodel.dart)
+│   ├── models/       (air_quality_data.dart, current_weather.dart, daily_forecast.dart, hourly_forecast.dart, location_model.dart, weather_data.dart)
+│   ├── services/     (app_exception.dart, geocoding_api_service.dart, local_storage_service.dart, weather_api_service.dart)
+│   └── repositories/ (location_repository.dart, weather_repository.dart)
+├── viewmodels/       (favorites_viewmodel.dart, search_viewmodel.dart, weather_viewmodel.dart)
 └── views/
-    ├── screens/     (main_shell.dart, home_screen.dart, hourly_screen.dart, daily_screen.dart, search_screen.dart, favorites_screen.dart)
-    └── widgets/     (floating_notch_nav_bar.dart, weather_ring.dart, sun_cycle_card.dart, forecast_tile.dart, ...)
+    ├── screens/      (main_shell.dart, home_screen.dart, hourly_screen.dart, daily_screen.dart, search_screen.dart, favorites_screen.dart)
+    └── widgets/      (floating_notch_nav_bar.dart, weather_ring.dart, sun_cycle_card.dart, forecast_tile.dart, ...)
 ```
 
 **Alur data:** `View` → aksi pengguna → `ViewModel` (`ChangeNotifier`) → `Repository` → `Service` (`HTTP GET` / `SharedPreferences`) → `Model` → `ViewModel.notifyListeners()` → `View` rebuild.
@@ -58,3 +58,11 @@ flutter analyze
 flutter test
 flutter run
 ```
+
+## Tangkapan Layar
+
+| Hari Ini (`HomeScreen`) | Per Jam (`HourlyScreen`) | Harian (`DailyScreen`) |
+| :---: | :---: | :---: |
+| ![Layar Hari Ini](image.png) | ![Layar Per Jam](image-1.png) | ![Layar Harian](image-2.png) |
+| **Cari Lokasi (`SearchScreen`)** | **Favorit (`FavoritesScreen`)** | |
+| ![Layar Cari Lokasi](image-4.png) | ![Layar Favorit](image-3.png) | |
